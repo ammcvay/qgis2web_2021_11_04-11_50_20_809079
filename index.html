@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        #map {
+            width: 1230px;
+            height: 1150px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[41.04856737121082,-90.79847577400204],[41.614901063632026,-89.98806486579552]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        map.createPane('pane_Band1_0');
+        map.getPane('pane_Band1_0').style.zIndex = 400;
+        var img_Band1_0 = 'data/Band1_0.png';
+        var img_bounds_Band1_0 = [[41.37863380406726,-90.77247190150015],[41.606111812957934,-90.333704159204]];
+        var layer_Band1_0 = new L.imageOverlay(img_Band1_0,
+                                              img_bounds_Band1_0,
+                                              {pane: 'pane_Band1_0'});
+        bounds_group.addLayer(layer_Band1_0);
+        map.addLayer(layer_Band1_0);
+        map.createPane('pane_Band2_1');
+        map.getPane('pane_Band2_1').style.zIndex = 401;
+        var img_Band2_1 = 'data/Band2_1.png';
+        var img_bounds_Band2_1 = [[41.383879042761585,-90.76164443215295],[41.600597164469406,-90.3438849253025]];
+        var layer_Band2_1 = new L.imageOverlay(img_Band2_1,
+                                              img_bounds_Band2_1,
+                                              {pane: 'pane_Band2_1'});
+        bounds_group.addLayer(layer_Band2_1);
+        map.addLayer(layer_Band2_1);
+        map.createPane('pane_Band3_2');
+        map.getPane('pane_Band3_2').style.zIndex = 402;
+        var img_Band3_2 = 'data/Band3_2.png';
+        var img_bounds_Band3_2 = [[41.383879042761585,-90.76164443215295],[41.600597164469406,-90.3438849253025]];
+        var layer_Band3_2 = new L.imageOverlay(img_Band3_2,
+                                              img_bounds_Band3_2,
+                                              {pane: 'pane_Band3_2'});
+        bounds_group.addLayer(layer_Band3_2);
+        map.addLayer(layer_Band3_2);
+        map.createPane('pane_Band4_3');
+        map.getPane('pane_Band4_3').style.zIndex = 403;
+        var img_Band4_3 = 'data/Band4_3.png';
+        var img_bounds_Band4_3 = [[41.383879042761585,-90.76164443215295],[41.600597164469406,-90.3438849253025]];
+        var layer_Band4_3 = new L.imageOverlay(img_Band4_3,
+                                              img_bounds_Band4_3,
+                                              {pane: 'pane_Band4_3'});
+        bounds_group.addLayer(layer_Band4_3);
+        map.addLayer(layer_Band4_3);
+        map.createPane('pane_Band5_4');
+        map.getPane('pane_Band5_4').style.zIndex = 404;
+        var img_Band5_4 = 'data/Band5_4.png';
+        var img_bounds_Band5_4 = [[41.383879042761585,-90.76164443215295],[41.600597164469406,-90.3438849253025]];
+        var layer_Band5_4 = new L.imageOverlay(img_Band5_4,
+                                              img_bounds_Band5_4,
+                                              {pane: 'pane_Band5_4'});
+        bounds_group.addLayer(layer_Band5_4);
+        map.addLayer(layer_Band5_4);
+        map.createPane('pane_Band6_5');
+        map.getPane('pane_Band6_5').style.zIndex = 405;
+        var img_Band6_5 = 'data/Band6_5.png';
+        var img_bounds_Band6_5 = [[41.37863380406726,-90.77247190150015],[41.606111812957934,-90.333704159204]];
+        var layer_Band6_5 = new L.imageOverlay(img_Band6_5,
+                                              img_bounds_Band6_5,
+                                              {pane: 'pane_Band6_5'});
+        bounds_group.addLayer(layer_Band6_5);
+        map.addLayer(layer_Band6_5);
+        map.createPane('pane_Band7_6');
+        map.getPane('pane_Band7_6').style.zIndex = 406;
+        var img_Band7_6 = 'data/Band7_6.png';
+        var img_bounds_Band7_6 = [[41.37863380406726,-90.77247190150015],[41.606111812957934,-90.333704159204]];
+        var layer_Band7_6 = new L.imageOverlay(img_Band7_6,
+                                              img_bounds_Band7_6,
+                                              {pane: 'pane_Band7_6'});
+        bounds_group.addLayer(layer_Band7_6);
+        map.addLayer(layer_Band7_6);
+        map.createPane('pane_EsriSatellite_7');
+        map.getPane('pane_EsriSatellite_7').style.zIndex = 407;
+        var layer_EsriSatellite_7 = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            pane: 'pane_EsriSatellite_7',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 17
+        });
+        layer_EsriSatellite_7;
+        map.addLayer(layer_EsriSatellite_7);
+        map.createPane('pane_Practicum2FinalEVI_8');
+        map.getPane('pane_Practicum2FinalEVI_8').style.zIndex = 408;
+        var img_Practicum2FinalEVI_8 = 'data/Practicum2FinalEVI_8.png';
+        var img_bounds_Practicum2FinalEVI_8 = [[41.37863380406726,-90.77247190150015],[41.606111812957934,-90.333704159204]];
+        var layer_Practicum2FinalEVI_8 = new L.imageOverlay(img_Practicum2FinalEVI_8,
+                                              img_bounds_Practicum2FinalEVI_8,
+                                              {pane: 'pane_Practicum2FinalEVI_8'});
+        bounds_group.addLayer(layer_Practicum2FinalEVI_8);
+        map.addLayer(layer_Practicum2FinalEVI_8);
+        setBounds();
+        L.ImageOverlay.include({
+            getBounds: function () {
+                return this._bounds;
+            }
+        });
+        </script>
+    </body>
+</html>
